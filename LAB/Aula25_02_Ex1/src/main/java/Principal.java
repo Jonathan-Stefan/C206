@@ -9,7 +9,6 @@ public class Principal {
             x = sc.nextInt();
 
         }while (!(x == 0 || x == 1));
-
         if (x == 0)
         {
             System.out.println("0 e 0 = 0");
