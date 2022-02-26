@@ -18,5 +18,7 @@ public class Main {
         System.out.printf("total de mortos foram: %d \n", + total);
         System.out.printf("A media de mortes foi: %f \n", + media);
 
+        numeroDeZumbis.close();
+
     }
 }
