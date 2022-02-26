@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) { //calcula a quantidade de zumbis mortos nas 3 ultima rodade e fz uma media
         float primeiraRodada = 130;
         float segundaRodada = 240;
         float terceiraRodada = 320;
