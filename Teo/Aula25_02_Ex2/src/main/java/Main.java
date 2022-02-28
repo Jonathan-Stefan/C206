@@ -1,7 +1,9 @@
+//Importa a biblçioteca Scanner do java
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        //Declra uma variavel "numeroDeZumbis" do tipo Scanner pra fazer entrada de dados (.in)
         Scanner numeroDeZumbis = new Scanner(System.in);
 
 
@@ -13,6 +15,7 @@ public class Main {
         int ultima = numeroDeZumbis.nextInt();
 
         int total = antepenultima + penultima + ultima;
+        //O float da direita faz um "Casting" transforma a variavel total em float
         float media = (float) total / 3;
 
         System.out.printf("total de mortos foram: %d \n", + total);
