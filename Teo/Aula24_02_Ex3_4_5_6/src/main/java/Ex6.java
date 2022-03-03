@@ -12,16 +12,11 @@ public class Ex6 {
         int x = rand.nextInt(10) + 1;
         System.out.println("Adivinhe o numero que foi gerado");
 
-        int numero = numeroEscolhido.nextInt();
-        if (numero > x)
-            System.out.println("O numero digitado eh maior que o numero gerado");
-        if (numero < x)
-            System.out.println("O numero digitado eh menor que o numero gerado");
+        int numero;
 
         do {
             System.out.println("Adivinhe o numero que foi gerado");
-            int tente = numeroEscolhido.nextInt();
-            numero = tente;
+            numero = numeroEscolhido.nextInt();
 
             if (numero > x)
                 System.out.println("O numero digitado eh maior que o numero gerado");
