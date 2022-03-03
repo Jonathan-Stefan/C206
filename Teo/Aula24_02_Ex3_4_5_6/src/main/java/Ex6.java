@@ -10,7 +10,6 @@ public class Ex6 {
 
         //Gera um numero aleatório entre 1 e 10
         int x = rand.nextInt(10) + 1;
-        System.out.println("Adivinhe o numero que foi gerado");
 
         int numero;
 
