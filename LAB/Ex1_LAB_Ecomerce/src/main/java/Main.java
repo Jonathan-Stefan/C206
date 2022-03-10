@@ -1,4 +1,5 @@
 //Biblioteca usada para fazer entrada de dados pelo usuario
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
@@ -6,16 +7,17 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner novoProduto = new Scanner(System.in); // Para fazer entrada de dados pelo usuario
-        Produto[] produtos = new Produto[3];
+        Produto[] produtos = new Produto[4];
         Carrinho carrinho = new Carrinho();
+        int i = 0; // variavel usada para alocar elementos em cada vetor
 
-        /*do // Entrada de dados pelo usuario, oprém não deu certo!!
+        produtos[i] = new Produto();
+
+        System.out.println("Digite o nome do produto");
+        produtos[i].nome = novoProduto.nextLine();
+
+        while (!Objects.equals(produtos[i].nome, "sair"))// Entrada de dados pelo usuario, porém não esta perfeita!!
         {
-            produtos[i] = new Produto();
-
-            System.out.println("Digite o nome do produto");
-            produtos[i].nome = novoProduto.nextLine();
-
             System.out.println("Digite a descrição do produto");
             produtos[i].descricao = novoProduto.nextLine();
 
@@ -24,9 +26,15 @@ public class Main {
 
             System.out.println("Digite o preço do produto");
             produtos[i].preco = novoProduto.nextDouble();
-        }while(produtos[i].nome != 'x')*/
+            novoProduto.nextLine();
+            i++;
+            produtos[i] = new Produto();
+            System.out.println("Digite o nome do produto");
+            produtos[i].nome = novoProduto.nextLine();
 
-        //Entrada de dado feita pelo DEV.
+        }
+
+        /*//Entrada de dado feita pelo DEV.
         produtos[0] = new Produto();
         produtos[0].nome = "Maca";
         produtos[0].descricao = "Gala";
@@ -45,14 +53,16 @@ public class Main {
         produtos[2].fabricante = "Samsung";
         produtos[2].preco = 1000;
 
+         */
+
         //Agragação
         carrinho.produtos = produtos;
 
         //Chama a função exibirInfos da classe Carrinho
-        carrinho.exibirInfos(produtos);
+        carrinho.exibirInfos();
 
         //Chama a função que calcula o total da compra e mostra o valor.
-        System.out.println("O Preço total da compra será de: R$" + carrinho.calculaTotal(produtos));
+        System.out.println("O Preço total da compra será de: R$" + carrinho.calculaTotal());
 
         //Apaga as entradas de dados da memória
         novoProduto.close();
