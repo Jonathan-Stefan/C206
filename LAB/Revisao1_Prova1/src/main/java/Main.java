@@ -7,7 +7,6 @@ public class Main {
         Scanner input = new Scanner(System.in); // Variavel para fazer entrada de dados
         Plataforma plataforma = new Plataforma(); // Criando o objeto plataforma
         plataforma.jogos = new Jogo[2]; // Criando o objeto jogo com vetor de 2 possições
-        Jogo jogos = new Jogo();
 
         System.out.println("digite o nome da plataforma: ");
         plataforma.nome = input.nextLine();
