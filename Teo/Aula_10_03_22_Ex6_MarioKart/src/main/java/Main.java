@@ -2,19 +2,26 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Piloto piloto = new Piloto();
-        Kart kart = new Kart();
+        Piloto piloto1 = new Piloto();
+        Piloto piloto2 = new Piloto();
 
-        kart.piloto = piloto;
+        Kart kart1 = new Kart();
+        Kart kart2 = new Kart();
 
-        kart.motor.cilindridas = "150";
-        kart.motor.velocidadeMaxima = 150;
+        kart1.nome = "Kart1";
+        kart2.nome = "Kart2";
 
-        piloto.nome = "Jonathan";
-        piloto.vilao = false;
 
-        kart.nome = "Audi";
-        kart.motor.mostrarInfo();
+
+        kart1.motor.cilindridas = "150";
+        kart1.motor.velocidadeMaxima = 150;
+        kart2.motor.cilindridas = "150";
+        kart2.motor.velocidadeMaxima = 150;
+
+        piloto1.nome = "Chapolin";
+        piloto1.vilao = false;
+        piloto2.nome = "Chaves";
+        piloto2.vilao = false;
 
 
     }
