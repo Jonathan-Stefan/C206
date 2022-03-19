@@ -6,8 +6,8 @@ public class Nave {
 
     private String nome;
     private double vida;
-    private String tipoTiro;
-    Asteroide asteroide;
+    private final String tipoTiro;
+
 
     public Nave(String nome, double vida, String tipoTiro) {
         this.nome = nome;
@@ -15,12 +15,15 @@ public class Nave {
         this.tipoTiro = tipoTiro;
     }
 
-    public void atirar(String asteroide){
-        if (asteroide == "pequeno" && tipoTiro == "normal"){
-
-
+    public void atirar(Asteroide ast){
+        if (tipoTiro.equals("explosivo")){
+            ast.destruir();
         }
+        else if (ast.getTipoAsteroide().equals("grande")){
+            System.out.println("Nave do tipo normal não destroi asteroide grande");
 
+        }else ast.destruir();
 
     }
+
 }
