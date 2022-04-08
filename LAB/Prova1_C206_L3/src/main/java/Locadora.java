@@ -25,7 +25,6 @@ public class Locadora {
             carrosParaAlugar++;
             input.nextLine();
         }
-
     }
 
     //Função para mostrar as informações da locadora e dos carros
@@ -38,10 +37,9 @@ public class Locadora {
         out.println("Informaçoes dos carros: ");
 
         for (Carro carro : carros) {
-            out.println("Nome: " + carro.nome);
-            out.println("Cor: " + carro.cor);
-            out.println("Velocidade maxima: " + carro.motor.velocidadeMaxima);
+            carro.mostraInfo();
         }
+
     }
 
     //Função para alugar carro
@@ -50,21 +48,21 @@ public class Locadora {
         out.println("Digite a posição do carro que sera alugado: ");
         indisponivel = input.nextInt();
         carros[indisponivel].alugado = true;
-        input.close();
+        //input.close();
     }
-
     //Função que retorna a porcentagem de carros que tem para alugar
     float contarCarrosParaAlugar(){
         float paraAlugar = 0;
         float  qtd=0;
 
         for (Carro carro : carros) {
-            if (carro.alugado == false) {
+            if (!carro.alugado) {
                 paraAlugar++;
             }
             qtd++;
         }
         return (paraAlugar/qtd)*100;
+
     }
 
 }
