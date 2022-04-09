@@ -5,9 +5,10 @@ public class Anao extends Personagem implements Alianca, CombateDistancia {
 
     private String tamanhoDaBarba;
 
-    public Anao(double vida, String nome, String classe) {
+    public Anao(double vida, String nome, String classe, String tamanhodabarba) {
         super(vida, nome, classe);
         super.setClasse("Cacador");
+        this.tamanhoDaBarba = tamanhodabarba;
     }
 
 
@@ -30,6 +31,7 @@ public class Anao extends Personagem implements Alianca, CombateDistancia {
         System.out.println("nome: "+this.getNome());
         System.out.println("Classe: "+this.getClasse());
         System.out.println("Vida: "+this.getVida());
+        System.out.println("Tamanho da barba: "+this.getTamanhoDaBarba());
         System.out.println();
     }
 
@@ -46,5 +48,13 @@ public class Anao extends Personagem implements Alianca, CombateDistancia {
     @Override
     public void castarSpell() {
         System.out.println("Atirando. ");
+    }
+
+    public String getTamanhoDaBarba() {
+        return tamanhoDaBarba;
+    }
+
+    public void setTamanhoDaBarba(String tamanhoDaBarba) {
+        this.tamanhoDaBarba = tamanhoDaBarba;
     }
 }

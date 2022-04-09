@@ -39,4 +39,8 @@ public abstract class Personagem {
     public void setClasse(String classe) {
         this.classe = classe;
     }
+
+    public static int getPersonagensCriados() {
+        return personagensCriados;
+    }
 }

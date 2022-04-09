@@ -5,9 +5,10 @@ public class Troll extends Personagem implements Horda, CombateDistancia {
 
     private String tamanhoDaPresa;
 
-    public Troll(double vida, String nome, String classe) {
+    public Troll(double vida, String nome, String classe, String presa) {
         super(vida, nome, classe);
         super.setClasse("Xama");
+        this.tamanhoDaPresa = presa;
     }
 
     @Override
@@ -28,6 +29,7 @@ public class Troll extends Personagem implements Horda, CombateDistancia {
         System.out.println("nome: "+this.getNome());
         System.out.println("Classe: "+this.getClasse());
         System.out.println("Vida: "+this.getVida());
+        System.out.println("Tamanho da presa: "+this.getTamanhoDaPresa());
         System.out.println();
     }
 
@@ -44,5 +46,13 @@ public class Troll extends Personagem implements Horda, CombateDistancia {
     @Override
     public void invadirAlliance() {
         System.out.println("Invadindo Stormwind.");
+    }
+
+    public String getTamanhoDaPresa() {
+        return tamanhoDaPresa;
+    }
+
+    public void setTamanhoDaPresa(String tamanhoDaPresa) {
+        this.tamanhoDaPresa = tamanhoDaPresa;
     }
 }
