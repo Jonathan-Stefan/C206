@@ -25,18 +25,21 @@ public class Main {
         i3.marca = "Takamine";
         i3.idade = 5;
 
-        Livro livro1 = new Livro();
+        /*Livro livro1 = new Livro();
         livro1.nome = "Cronicas de Narnia";
         livro1.autor = "Josephi";
         livro1.editora = "Abril";
-        livro1.publicacao = 2016;
+        livro1.publicacao = 2016;*/
 
-        //iDAO.inserirInstrumento(i1);
-        //iDAO.inserirInstrumento(i2);
-        //iDAO.inserirInstrumento(i3);
-        //iDAO.atualizarInstrumento(1,i3);
-        //iDAO.deletarInstrumento(5);
+        /*iDAO.inserirInstrumento(i1);
+        iDAO.inserirInstrumento(i2);
+        iDAO.inserirInstrumento(i3);
+        iDAO.atualizarInstrumento(1,i3);
+        iDAO.deletarInstrumento(5);
 
-        lDAO.inserirLivro(livro1);
+        lDAO.inserirLivro(livro1);*/
+
+        //iDAO.buscarInstrumentosSemFiltro();
+        iDAO.buscarInstrumentoPorId(2);
     }
 }
