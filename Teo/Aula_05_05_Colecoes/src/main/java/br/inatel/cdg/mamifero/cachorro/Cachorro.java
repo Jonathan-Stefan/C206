@@ -5,12 +5,9 @@ import br.inatel.cdg.mamifero.Mamifero;
 public class Cachorro extends Mamifero {
 
 
-    public Cachorro(String nome, int idade) {
+    public Cachorro(String nome, double idade) {
         super(nome, idade);
     }
 
-    @Override
-    public int compareTo(Mamifero o) {
-        return 0;
-    }
+
 }

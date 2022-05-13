@@ -2,19 +2,31 @@ package br.inatel.cdg.mamifero;
 
 public abstract class Mamifero implements Comparable<Mamifero>{
 
-    protected String nome;
-    protected  double idade;
+    private String nome;
+    private double vida;
 
-    public Mamifero (String nome, int idade){
+    public Mamifero (String nome, double vida){
         this.nome = nome;
-        this.idade = idade;
+        this.vida = vida;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public double getIdade() {
-        return idade;
+    public double getvida() {
+        return vida;
+    }
+
+    @Override
+    public int compareTo(Mamifero o) {
+        if (this.vida < o.getvida()){
+            return -1;
+        }
+        if (this.vida > o.getvida()){
+            return 1;
+        }
+
+        return 0;
     }
 }

@@ -5,12 +5,9 @@ import br.inatel.cdg.mamifero.Mamifero;
 public class Lontra extends Mamifero {
 
 
-    public Lontra(String nome, int idade) {
+    public Lontra(String nome, double idade) {
         super(nome, idade);
     }
 
-    @Override
-    public int compareTo(Mamifero o) {
-        return 0;
-    }
+
 }
