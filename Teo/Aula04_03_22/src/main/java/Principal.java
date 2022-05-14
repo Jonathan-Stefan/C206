@@ -1,17 +1,19 @@
 public class Principal {
 
     public static void main(String[] args) {
+        Conta c1 = new Conta(158, 100);
+        Cliente cl1 = new Cliente("jose", "136.458.852-12");
+        Cliente cl2 = new Cliente("Adolfo", "165.785.485-12");
+        Cliente cl3 = null;
 
-        /*Conta c = new Conta(500, 10);//Essa conta usa o construtor com parametros
+        c1.adiconaCliente(cl1);
+        c1.adiconaCliente(cl2);
+        c1.adiconaCliente(cl3);
 
-        System.out.println(c.getSaldo());
+        c1.mostraInfo();
 
-        Conta c2 = new Conta(); //Essa conta usa o construtor sem parametros
-        c2.depositar(5);
-        System.out.println(c2.getSaldo());*/
 
-        Pessoa p = new Pessoa();
-        System.out.println(p.getNome());
 
+        System.out.println("Fim do metodo Main");
     }
 }
