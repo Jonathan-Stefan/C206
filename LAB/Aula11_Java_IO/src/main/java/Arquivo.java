@@ -7,7 +7,6 @@ public class Arquivo {
         OutputStream os = null;
         OutputStreamWriter osw = null;
         BufferedWriter bw = null;
-        String linhaEscrever;
 
         try{
 
