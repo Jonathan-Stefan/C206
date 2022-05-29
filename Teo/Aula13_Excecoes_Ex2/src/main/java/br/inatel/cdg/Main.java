@@ -32,10 +32,10 @@ public class Main {
                         try {
                             System.out.println("Digite o nome do projeto: ");
                             aux1 = input.nextLine();
+                            projetos.verificaNomeDuplicado(aux1);
                             System.out.println("Digite a nota do projeto: ");
                             aux2 = input.nextDouble();
                             input.nextLine();
-                            //projetos.verificaNomeDuplicado(aux1);
                             projetos.inserirProjeto(aux1, aux2);
                         }catch (NomeDuplicado e){
                             e.printStackTrace();
@@ -48,7 +48,7 @@ public class Main {
 
                 case "2":
                     projetos.mostraInfo();
-                    System.out.println(projetos.getCont());
+
                     break;
 
                 default:
